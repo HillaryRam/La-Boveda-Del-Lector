@@ -21,7 +21,7 @@ Una página de aterrizaje (landing page) temática inspirada en el mundo mágico
 ## 🚀 Cómo ver el proyecto
 
 Puedes ver la versión en vivo del proyecto aquí:
-**[Enlace a GitHub Pages](https://hillaryram.github.io/La-Boveda-Del-Lector/)**
+**[La Bóveda Del Lector](https://hillaryram.github.io/La-Boveda-Del-Lector/)**
 
 ## 📦 Instalación Local
 
