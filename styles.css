@@ -1,0 +1,613 @@
+/* --- RESET BÁSICO --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #00101F;
+    font-family: 'Cinzel', serif;
+}
+
+/* --- CONTENEDOR PRINCIPAL (Lienzo Fijo 1440px) --- */
+.main-container {
+    width: 1440px;
+    height: 3074px;
+    position: relative;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.50) 100%), #00101F;
+    overflow: hidden;
+    margin: 0 auto;
+    transform-origin: top left;
+    /* Para el script de escalado */
+}
+
+/* --- FONDOS Y CAPAS --- */
+.bg-layer {
+    width: 1440px;
+    height: auto;
+    left: 0;
+    position: absolute;
+    object-fit: cover;
+}
+
+.base-layer {
+    top: 2050px;
+    background: radial-gradient(ellipse 63.87% 39.34% at 50.02% 57.03%, rgba(0, 16, 31, 0) 0%, #00101F 83%);
+}
+
+.mid-layer {
+    top: 0px;
+    background: radial-gradient(ellipse 72.46% 48.99% at 50.02% 48.44%, rgba(0, 16, 31, 0) 0%, #00101F 66%);
+    background-blend-mode: normal, luminosity;
+}
+
+.top-layer {
+    top: 1025px;
+    background: radial-gradient(ellipse 72.46% 60.00% at 50.02% 48.44%, rgba(0, 16, 31, 0) 0%, #00101F 66%);
+    background-blend-mode: normal, luminosity;
+}
+
+.mapa-fondo-izq {
+    width: 196px;
+    height: 1187px;
+    left: 196px;
+    top: 1216px;
+    position: absolute;
+    transform: rotate(180deg);
+    transform-origin: top left;
+    object-fit: contain;
+}
+
+.mapa-fondo-der {
+    width: 168px;
+    height: 1236px;
+    left: auto;
+    right: 0;
+    top: 755px;
+    position: absolute;
+    object-fit: contain;
+}
+
+/* --- HEADER / BANNER --- */
+.top-banner {
+    width: 100%;
+    min-height: 83px;
+    padding: 15px 20px;
+    left: 0;
+    top: 0;
+    position: absolute;
+    background: #F1EBD3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    z-index: 1000;
+    animation: magicalPulse 3s infinite ease-in-out;
+}
+
+@keyframes magicalPulse {
+    0% {
+        box-shadow: 0 0 10px rgba(253, 231, 187, 0.5);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(253, 231, 187, 0.8), 0 0 10px rgba(127, 9, 9, 0.3);
+    }
+
+    100% {
+        box-shadow: 0 0 10px rgba(253, 231, 187, 0.5);
+    }
+}
+
+@media (max-width: 768px) {
+    .top-banner {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .banner-content {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+.banner-content {
+    text-align: center;
+}
+
+.text-regular {
+    color: black;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.text-bold {
+    color: #690909;
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: capitalize;
+}
+
+.logo-main {
+    width: 590px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100px;
+    position: absolute;
+    object-fit: contain;
+}
+
+/* --- ARTEFACTO DEL MES (EJERCICIO 2.1) --- */
+.artefacto-titulo {
+    width: 386px;
+    left: 850px;
+    top: 190px;
+    position: absolute;
+    text-align: center;
+    color: white;
+}
+
+.artefacto-grupo {
+    width: 494px;
+    height: 423px;
+    left: 250px;
+    top: 350px;
+    position: absolute;
+}
+
+.cojin {
+    width: 500px;
+    left: 20px;
+    top: 260px;
+    position: absolute;
+    object-fit: contain;
+    transform: scale(1.3);
+}
+
+.libro-hp {
+    position: absolute;
+    left: 170px;
+    object-fit: contain;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.libro-hp:hover {
+    transform: scale(1.1);
+    z-index: 100;
+}
+
+.libro-1 {
+    width: 210px;
+    left: 95px;
+    top: 0px;
+}
+
+.libro-2 {
+    width: 230px;
+    left: 160px;
+    top: 5px;
+}
+
+.libro-3 {
+    width: 230px;
+    left: 230px;
+    top: 25px;
+}
+
+.brillo-magico {
+    width: 150px;
+    height: 154px;
+    position: absolute;
+    background: rgba(255, 138, 4, 0.80);
+    filter: blur(110.90px);
+}
+
+.brillo-izq {
+    left: 72px;
+    top: 191px;
+}
+
+.brillo-der {
+    left: 421px;
+    top: 345px;
+    transform: rotate(180deg);
+    transform-origin: top left;
+}
+
+.sombrero-seleccionador {
+    width: 450px;
+    left: 840px;
+    top: 390px;
+    position: absolute;
+    object-fit: contain;
+}
+
+/* --- PERGAMINO LATERAL --- */
+.pergamino-lateral {
+    width: 463px;
+    height: 124px;
+    left: 820px;
+    top: 300px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.pergamino-img {
+    width: 463px;
+    height: 124px;
+    left: 0;
+    top: 0;
+    position: absolute;
+    object-fit: contain;
+}
+
+.pergamino-texto {
+    left: 79px;
+    top: 49px;
+    position: absolute;
+    mix-blend-mode: overlay;
+    text-align: center;
+    color: #5E0A0A;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* --- ESPEJO DE OESED (MULTIMEDIA) --- */
+.espejo-titulo {
+    width: 386px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 957px;
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.video-content {
+    width: 360px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 1240px;
+    position: absolute;
+    object-fit: cover;
+    background-color: black;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+.marco-espejo {
+    width: 700px;
+    height: 1070px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 1000px;
+    position: absolute;
+    object-fit: fill;
+    z-index: 2;
+    /* Marco sobre video */
+    pointer-events: none;
+}
+
+/* --- CARTAS VOLADORAS --- */
+.carta-voladora {
+    width: 100px;
+    position: absolute;
+    transform-origin: center;
+    object-fit: contain;
+}
+
+.carta-1 {
+    left: 50%;
+    margin-left: -335px;
+    top: 1250px;
+    transform: rotate(-25deg) translateX(-50%);
+}
+
+.carta-2 {
+    left: 50%;
+    margin-left: -365px;
+    top: 1450px;
+    transform: rotate(25deg) translateX(-50%);
+}
+
+.carta-3 {
+    left: 50%;
+    margin-left: -335px;
+    top: 1650px;
+    transform: rotate(-45deg) translateX(-50%);
+}
+
+.carta-4 {
+    left: 50%;
+    margin-left: 295px;
+    top: 1250px;
+    transform: rotate(35deg) translateX(-50%);
+}
+
+.carta-5 {
+    left: 50%;
+    margin-left: 325px;
+    top: 1450px;
+    transform: rotate(-10deg) translateX(-50%);
+}
+
+.carta-6 {
+    left: 50%;
+    margin-left: 295px;
+    top: 1700px;
+    transform: rotate(25deg) translateX(-50%);
+}
+
+/* --- BARRA DE VOLUMEN (VARITA) --- */
+.barra-fondo-sombra {
+    width: 431px;
+    height: 71px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 2035px;
+    position: absolute;
+    background: #5E0A0A;
+    border-radius: 93px;
+}
+
+.barra-fondo-borde {
+    width: 431px;
+    height: 71px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 2035px;
+    position: absolute;
+    border-radius: 93px;
+    border: 3px #FDE7BB solid;
+}
+
+.varita-slider {
+    width: 402px;
+    left: 50%;
+    top: 2070.5px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    pointer-events: none;
+}
+
+.slider-knob {
+    width: 27px;
+    height: 27px;
+    left: 705px;
+    top: 2060px;
+    position: absolute;
+    background: linear-gradient(135deg, #9E8976 0%, #7A5E50 19%, #F6D0AB 41%, #9D774E 61%, #C99B70 86%, #795F52 100%), #D9D9D9;
+    border-radius: 9999px;
+    cursor: pointer;
+    z-index: 20;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* --- CONTROLES DE VIDEO (EJERCICIO 3.2) --- */
+.boton-video {
+    width: 82px;
+    height: 82px;
+    position: absolute;
+    top: 1773px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    display: block;
+    object-fit: contain;
+    z-index: 10;
+}
+
+.btn-play {
+    left: 390px;
+    top: 2040px;
+}
+
+.btn-replay {
+    left: 980px;
+    top: 2040px;
+}
+
+/* --- MESA Y FORMULARIO (EJERCICIO 3.1) --- */
+.mesa-madera {
+    width: 1440px;
+    height: 960px;
+    left: 0px;
+    top: 2114px;
+    position: absolute;
+    object-fit: cover;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+}
+
+.form-bg {
+    width: 1104px;
+    height: 568px;
+    left: 168px;
+    top: 2276px;
+    position: absolute;
+    object-fit: contain;
+}
+
+.form-titulo {
+    left: 432px;
+    top: 2381px;
+    position: absolute;
+    text-align: center;
+    color: #7F0909;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.linea-decorativa {
+    width: 794px;
+    height: 0px;
+    left: 323px;
+    top: 2438px;
+    position: absolute;
+    outline: 2px #7F0909 solid;
+    outline-offset: -1px;
+}
+
+.inputs-container {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 2472px;
+    position: absolute;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+}
+
+.input-group {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.label {
+    text-align: center;
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.input-box {
+    width: 207px;
+    height: 36px;
+    background: #F2ECD2;
+    border: 2px #7F0909 solid;
+    padding: 0 10px;
+    font-family: inherit;
+    font-size: 14px;
+    color: #5E0A0A;
+    cursor: pointer;
+}
+
+.input-box::placeholder {
+    color: rgba(94, 10, 10, 0.5);
+}
+
+.logo-form {
+    width: 250px;
+    height: 137px;
+    left: 265px;
+    top: 2662px;
+    position: absolute;
+    mix-blend-mode: multiply;
+    object-fit: contain;
+}
+
+.boton-enviar-container {
+    width: 294px;
+    height: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 2590px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.sello-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.libro-abierto {
+    width: 445px;
+    height: 243px;
+    left: 498px;
+    top: 2706px;
+    position: absolute;
+    object-fit: contain;
+}
+
+/* --- CORTINAS MAPAS --- */
+.curtain-map {
+    width: 720px;
+    height: 1024px;
+    top: 0px;
+    position: absolute;
+    object-fit: cover;
+}
+
+.curtain-map.right {
+    left: 1448px;
+}
+
+.curtain-map.left {
+    left: -731px;
+}
+
+/* --- CLASES DE UTILIDAD (EJERCICIO 3.3) --- */
+.hidden {
+    display: none !important;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+.fade {
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+/* --- MENSAJE DE CONFIRMACIÓN --- */
+#confirmation-msg {
+    position: absolute;
+    top: 2350px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    text-align: center;
+    z-index: 20;
+    font-family: 'Cinzel', serif;
+    display: none;
+}
+
+/* --- CONTENIDO EXTRA: PERGAMINO DESPLEGABLE --- */
+.pergamino-contenido {
+    position: absolute;
+    top: 50px;
+    width: 370px;
+    left: 51%;
+    transform: translateX(-50%);
+    background: #f9dca7;
+    padding: 55px;
+    box-sizing: border-box;
+    border: 3px solid #5E0A0A;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    font-family: 'Cinzel', serif;
+    color: #5E0A0A;
+    text-align: center;
+    z-index: -1;
+}
+
+.pergamino-contenido h3 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    border-bottom: 2px solid #5E0A0A;
+    padding-bottom: 5px;
+    font-size: 16px;
+}
+
+.pergamino-contenido p {
+    margin: 5px 0;
+    font-size: 14px;
+}

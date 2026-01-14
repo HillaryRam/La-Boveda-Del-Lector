@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Bóveda del Lector</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/favicon.png">
+</head>
+
+<body>
+    <!-- EJERCICIO 3.3: TEXTO PROMOCIONAL -->
+    <div class="top-banner">
+        <div class="banner-content">
+            <span class="text-regular">¡Oferta Mágica: </span>
+            <span class="text-bold">20% de Descuento</span>
+            <span class="text-regular"> en Ediciones Ilustradas!</span>
+        </div>
+    </div>
+
+    <div class="main-container">
+
+        <!-- Fondos -->
+        <img class="bg-layer base-layer" src="images/wallaper3.png" alt="Fondo Base" />
+        <img class="bg-layer mid-layer" src="images/wallaper.png" alt="Niebla 1" />
+        <img class="bg-layer top-layer" src="images/wallaper2.png" alt="Niebla 2" />
+
+        <img class="mapa-fondo-izq" src="images/mapa_drch_fondo.png" alt="Mapa Fondo Izquierda" />
+        <img class="mapa-fondo-der" src="images/mapa_izq_fondo.png" alt="Mapa Fondo Derecha" />
+
+        <img class="logo-main" src="images/logo2.png" alt="La Bóveda del Lector" />
+
+        <!-- Artefactos -->
+        <div class="artefacto-grupo">
+            <img class="cojin" src="images/cojin.png" alt="Cojín" />
+            <img class="libro-hp libro-1" src="images/HP_1.png" alt="Libro 1" />
+            <img class="libro-hp libro-2" src="images/HP_2.png" alt="Libro 2" />
+            <img class="libro-hp libro-3" src="images/HP_3.png" alt="Libro 3" />
+            <div class="brillo-magico brillo-izq"></div>
+            <div class="brillo-magico brillo-der"></div>
+        </div>
+
+        <!-- EJERCICIO 2.2: TEXTO DESPLEGABLE -->
+        <div class="pergamino-lateral" id="toggle-author">
+            <img class="pergamino-img" src="images/pergamino_cerrado.png" alt="Pergamino" />
+            <div class="pergamino-texto">Rompe el sello del autor</div>
+            <div class="pergamino-contenido" style="display: none;">
+                <h3>Edición Especial</h3>
+                <p>En esta edición especial de <strong>Harry Potter</strong>, el texto completo e
+                    íntegro de la obra original de <strong>J.K. Rowling</strong> va acompañado por hermosas
+                    ilustraciones a todo color en casi todas las páginas, un diseño excelente y varias sorpresas
+                    interactivas de ingeniería en papel, obra del célebre estudio <strong>MinaLima</strong>.</p>
+            </div>
+        </div>
+
+        <div class="espejo-titulo">entra en los sagrados pasillos de hogwarts</div>
+
+        <video class="video-content" loop poster="images/video.jpg">
+            <source src="video.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+        <img class="marco-espejo" src="images/espejo.png" alt="Marco Espejo de Oésed" />
+
+        <img class="carta-voladora carta-1" src="images/carta.png" alt="Carta" />
+        <img class="carta-voladora carta-2" src="images/carta.png" alt="Carta" />
+        <img class="carta-voladora carta-3" src="images/carta.png" alt="Carta" />
+        <img class="carta-voladora carta-4" src="images/carta.png" alt="Carta" />
+        <img class="carta-voladora carta-5" src="images/carta.png" alt="Carta" />
+        <img class="carta-voladora carta-6" src="images/carta.png" alt="Carta" />
+
+        <div class="barra-fondo-sombra"></div>
+        <div class="barra-fondo-borde"></div>
+        <img class="varita-slider" src="images/varita.png" alt="Varita Mágica" />
+        <div class="slider-knob"></div>
+
+        <img class="boton-video btn-play" src="images/boton play.png" alt="Play">
+        <img class="boton-video btn-replay" src="images/boton replay.png" alt="Replay">
+
+        <img class="mesa-madera" src="images/mesa.png" alt="Mesa de madera" />
+
+        <!-- Formulario - EJERCICIO 3.1 -->
+        <img class="form-bg" src="images/formulario.png" alt="Fondo Formulario" />
+        <div class="form-titulo">HOGWARTS EXPRESS - PEDIDO</div>
+        <div class="linea-decorativa"></div>
+
+        <div class="inputs-container">
+            <div class="input-group">
+                <label for="nombre" class="label">Nombre del mago/bruja:</label>
+                <input type="text" id="nombre" class="input-box" placeholder="Escribe aquí..." autocomplete="off">
+            </div>
+            <div class="input-group">
+                <label for="libro" class="label">selecciona tu libro:</label>
+                <select id="libro" class="input-box" name="libro">
+                    <option value="" disabled selected>Elige un libro...</option>
+                    <option value="piedra">Harry Potter y la Piedra Filosofal</option>
+                    <option value="camara">Harry Potter y la Cámara Secreta</option>
+                    <option value="prisionero">Harry Potter y el Prisionero de Azkaban</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="email" class="label">Luchuza (email):</label>
+                <input type="email" id="email" class="input-box" placeholder="Escribe aquí..." autocomplete="off">
+            </div>
+        </div>
+
+        <div id="form-feedback" class="form-feedback"
+            style="display: none; position: absolute; top: 2550px; width: 100%; text-align: center; color: #7F0909; font-weight: bold; z-index: 20;">
+        </div>
+
+        <div class="boton-enviar-container">
+            <img class="sello-img" src="images/boton_off.png" alt="Enviar" />
+        </div>
+
+        <img class="logo-form" src="images/logo.png" alt="Logo pequeño" />
+
+        <img class="libro-abierto" src="images/libro_abierto.png" alt="Libro Abierto" />
+
+        <img class="curtain-map right" src="images/mapa_drch.png" alt="Mapa Derecha" />
+        <img class="curtain-map left" src="images/mapa_izq.png" alt="Mapa Izquierda" />
+
+        <img class="sombrero-seleccionador" src="images/sombrero.png" alt="Sombrero Seleccionador" />
+
+        <!-- EJERCICIO 1.2: DESCRIPCIÓN VIDEO -->
+        <div class="video-desc"
+            style="display:none; position: absolute; top: 1800px; left: 600px; color: white; background: rgba(0,0,0,0.7); padding: 10px; width: 250px;">
+            Descubre los secretos del castillo de Hogwarts.
+        </div>
+
+        <!-- EJERCICIO 3.1: MENSAJE CONFIRMACIÓN -->
+        <div id="confirmation-msg"
+            style="display:none; position: absolute; top: 2400px; left: 50%; transform: translateX(-50%); background: white; padding: 20px; border: 2px solid #7F0909; z-index: 100; text-align: center;">
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
